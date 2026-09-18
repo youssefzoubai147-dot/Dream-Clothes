@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: clothing-store
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: ADMIN_EMAIL
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: STORE_NAME
+        value: متجري
+      - key: CURRENCY
+        value: MAD
